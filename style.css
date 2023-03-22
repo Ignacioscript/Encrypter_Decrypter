@@ -1,0 +1,111 @@
+body {
+    background-color: #0a0a2a;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #logo{
+    width: 20px;
+    height: 20px;
+    
+  }
+  
+  .container {
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #0a0a2a;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #0a0a2a;
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #0a0a2a;
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  select:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #0a0a2a;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #21214a;
+  }
+  
+  #result {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    word-wrap: break-word;
+    min-height: 120px;
+    color: #0a0a2a;
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;}
+    
+  
+    #result:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  }
+

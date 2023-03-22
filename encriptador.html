@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-+zYrx6U8V6TqTJQfNG9RjZa8c7URuJvLbsm3qYU6zXYU6VHYTJmXrX9dzG0Z8kHfns/6Dj88bUEwY/xN8H0Wbw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Encriptador de Texto</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Encriptador de Texto</h1>
+        <select id="action">
+            <option value="encrypt">Encriptar</option>
+            <option value="decrypt">Desencriptar</option>
+        </select>
+        <textarea id="inputText" rows="4" placeholder="Introduce el texto aquí..."></textarea>
+        <button id="submitBtn">Procesar</button>
+        <div id="result"></div>
+        <button id="copyBtn">Copiar resultado</button>
+    </div>
+
+    <script>
+        const encryptionMap = {
+            'e': 'enter',
+            'i': 'imes',
+            'a': 'ai',
+            'o': 'ober',
+            'u': 'ufat'
+        };
+
+        const decryptionMap = {
+            'enter': 'e',
+            'imes': 'i',
+            'ai': 'a',
+            'ober': 'o',
+            'ufat': 'u'
+        };
+
+        function encrypt(text) {
+            return text.replace(/[aeiou]/g, (match) => encryptionMap[match]);
+        }
+
+        function decrypt(text) {
+            let decryptedText = text;
+            for (const key in decryptionMap) {
+                decryptedText = decryptedText.replace(new RegExp(key, 'g'), decryptionMap[key]);
+            }
+            return decryptedText;
+}
+
+const actionSelect = document.getElementById('action');
+    const inputText = document.getElementById('inputText');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultDiv = document.getElementById('result');
+    const copyBtn = document.getElementById('copyBtn');
+
+    submitBtn.addEventListener('click', () => {
+        const action = actionSelect.value;
+        const text = inputText.value.toLowerCase();
+
+        let result;
+        if (action === 'encrypt') {
+            result = encrypt(text);
+        } else {
+            result = decrypt(text);
+        }
+
+        resultDiv.innerText = result;
+    });
+
+    copyBtn.addEventListener('click', () => {
+        const range = document.createRange();
+        range.selectNode(resultDiv);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert('Resultado copiado al portapapeles');
+    });
+</script>
+</body>
+</html>
