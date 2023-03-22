@@ -33,6 +33,13 @@ Este es un proyecto sencillo de una aplicación que encripta y desencripta palab
 ## Funcionalidad
 La aplicación permite a los usuarios ingresar una palabra y seleccionar una acción (encriptar o desencriptar). Al hacer clic en el botón    correspondiente, la palabra se encripta o desencripta según la opción seleccionada y se muestra el resultado en la página.
 
+![Screenshot from 2023-03-22 09-57-01](https://user-images.githubusercontent.com/107491009/226945699-c5add790-14a3-404d-832c-03af346c745f.png)
+
+![Screenshot from 2023-03-22 09-57-44](https://user-images.githubusercontent.com/107491009/226945752-f45fd6f9-7ea2-4cc4-b2eb-4ba12411577b.png)
+
+![Screenshot from 2023-03-22 09-58-07](https://user-images.githubusercontent.com/107491009/226945788-2591be02-53ff-4318-b643-27946aa9386b.png)
+
+
 ## Contribuciones
 Las contribuciones son bienvenidas. Siéntase libre de abrir un issue o realizar un pull request con sus mejoras y sugerencias.
 
